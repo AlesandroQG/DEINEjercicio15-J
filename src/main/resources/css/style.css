@@ -1,0 +1,18 @@
+.main-pane {
+    -fx-background-color: black;
+}
+
+.button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.toggle-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-margin-left: 10;
+}
+
+.toggle-button:selected {
+    -fx-border-color: blue;
+}

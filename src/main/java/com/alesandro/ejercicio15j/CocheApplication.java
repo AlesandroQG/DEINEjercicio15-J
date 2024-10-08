@@ -3,6 +3,7 @@ package com.alesandro.ejercicio15j;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -22,9 +23,11 @@ public class CocheApplication extends Application {
      */
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(CocheApplication.class.getResource("/fmxl/hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        FXMLLoader fxmlLoader = new FXMLLoader(CocheApplication.class.getResource("/fxml/MiniCooper.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 500, 500);
+        stage.setTitle("MINI COOPER");
+        stage.getIcons().add(new Image(CocheApplication.class.getResourceAsStream("/imagenes/Cooper.png")));
+        stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
     }
