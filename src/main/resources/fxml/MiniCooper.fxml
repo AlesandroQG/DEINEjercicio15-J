@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<FlowPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="500.0" prefWidth="500.0" styleClass="main-pane" stylesheets="@../css/style.css" vgap="5.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alesandro.ejercicio15j.CocheController">
+   <children>
+      <FlowPane alignment="CENTER" hgap="50.0" prefWidth="500.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/cooperLogo.png" />
+               </image>
+            </ImageView>
+            <Label style="-fx-text-fill: white;" text="CONFIGURA TU MINI COOPER" />
+         </children>
+      </FlowPane>
+      <Button fx:id="btnLuz" mnemonicParsing="false" onAction="#luces">
+         <graphic>
+            <ImageView fx:id="imagenLuz" fitHeight="150.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/lucesOff.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <FlowPane.margin>
+            <Insets left="5.0" />
+         </FlowPane.margin>
+      </Button>
+      <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <StackPane prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="imagen" fitHeight="300.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/coches/miniBlazingRed.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="luzImagen" fitHeight="300.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../imagenes/autoLuz.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </StackPane>
+         </children>
+      </FlowPane>
+      <FlowPane alignment="CENTER" columnHalignment="CENTER" prefWidth="200.0">
+         <children>
+            <Label contentDisplay="CENTER" style="-fx-text-fill: white;" text="Selecciona tu color favorito" />
+         </children>
+      </FlowPane>
+      <FlowPane alignment="CENTER" columnHalignment="CENTER" hgap="20.0">
+         <children>
+            <ToggleButton fx:id="colorBlazingRed" mnemonicParsing="false" selected="true">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/colores/colorBlazingRed.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <toggleGroup>
+                  <ToggleGroup fx:id="toggleColor" />
+               </toggleGroup>
+            </ToggleButton>
+            <ToggleButton fx:id="colorElectricBlue" mnemonicParsing="false" toggleGroup="$toggleColor">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/colores/colorElectricBlue.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="colorLapisluxuryBlue" mnemonicParsing="false" toggleGroup="$toggleColor">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/colores/colorLapisluxuryBlue.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="colorMidnightBlack" mnemonicParsing="false" toggleGroup="$toggleColor">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/colores/colorMidnightBlack.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="colorMoonwalkGrey" mnemonicParsing="false" toggleGroup="$toggleColor">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/colores/colorMoonwalkGrey.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="colorPepperWhite" mnemonicParsing="false" toggleGroup="$toggleColor">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/colores/colorPepperWhite.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="colorThunderGray" mnemonicParsing="false" toggleGroup="$toggleColor">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/colores/colorThunderGray.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="colorVolcaninOrange" mnemonicParsing="false" toggleGroup="$toggleColor">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/colores/colorVolcaninOrange.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+         </children>
+      </FlowPane>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</FlowPane>
